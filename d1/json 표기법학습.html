@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json 표기법학습</title>
+
+<style>
+</style>
+<script>
+//숫자 문자 논리값
+/*
+var arr1=["1","2","3"];
+var arr2=["딸기","사과","바나나"];
+var arr3=[true,false,false];
+var b1=new Bullet();
+var b2=new Bullet();
+var b3=new Bullet();
+
+var arr4=[b1,b2,b3];
+
+array.push(b1);
+array.push(b2);
+array.push(b3);*/
+/*{//프로그램 로직에 사용되는 그객체와는 목적이 다르기때문에
+	//오직 데이터를 담는 용도로만 사용된다
+	"name":"반장",
+	"age":31
+	"isMarry":false,
+	"pets":[
+	{
+		"type":"말티즈",
+		"age":3;
+		"isMan":false
+	},{
+		"type":"말티즈",
+		"age":3;
+		"isMan":false
+	},{
+		"type":"말티즈",
+		"age":3;
+		"isMan":false
+	}
+	
+	]
+}*/
+var data="";
+
+data=data+"{";
+data=data+"	\"제품수\": 3,"
+data=data+"\"원산지\":\"한국\",";
+data=data+"\"제품목록\":[";
+data=data+"{";
+data=data+"\"제품명\": \"세탁기\",";
+data=data+"\"제조사\": \"삼성\",";
+data=data+"\"가격\" : 50,";
+data=data+"\"절전기능\": \"지원\"";
+data=data+"},	";
+data=data+"{";
+data=data+"\"제품명\": \"세탁기\",";
+data=data+"\"제조사\": \"삼성\",";
+data=data+"\"가격\" : 50,";
+data=data+"\"절전기능\": \"지원\"";
+data=data+"},";
+data=data+"{";
+data=data+"\"제품명\": \"세탁기\",";
+data=data+"\"제조사\": \"삼성\",";
+data=data+"\"가격\" : 50,";
+data=data+"\"절전기능\": \"지원\"";
+data=data+"}";
+data=data+"]";
+data=data+"}";
+  
+  var obj=JSON.parse(data);//string에 불과한 data json객체화시킴!!
+//스트링 데이터를 대상으로 json객체화 시키면 마치 객체처럼 취급받기 때문에
+//객체지향언어의 코드방식인 속성에접근하는 개발방법이가능하다
+ document.write(obj.원산지);
+ var list=obj.제품목록;
+ for(var i=0;i<list.length;i++){
+
+	document.write(list[i].제품명);
+ }
+</script>
+</head>
+<body>
+
+</body>
+</html>

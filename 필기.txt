@@ -1,0 +1,33 @@
+/*
+테이블에 들어가는 데이터는 무결성을 확보하기위해 컬럼에다양한 제한
+사항을 걸수잇다 즉 제약적 조건을 부여할 수잇다 누가? 테이블을 생성주체가
+개발자or DBA 
+
+1.절대로 아무것도 넣지않음을 허용하지않겠다.
+not null 제약조건
+
+2.절대로 중복을  허용하지 않겠다.
+unique 제약조건
+
+3.지정한 값만을 허용하겠다.
+check제약조건
+
+4.null을 허용하지않으면서 중복도 허용하고싶지않을때
+primary key 기본키 제약조건 
+동일한 데이터가 입력될 경우 레코드간 구분하기 위함
+
+5.default제약조건
+레코드 입력시 기본적으로 들어갈 데이터를 지정하는 제약조건
+*/
+
+create table board(
+   board_id int primary key auto_increment,
+   writer varchar(20),
+   title varchar(100),
+   content text,
+   hit int default 0,
+   regdate timestamp default now()
+   ) default charset utf8;
+	
+
+)

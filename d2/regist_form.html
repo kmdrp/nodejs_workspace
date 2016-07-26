@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nodejs 가입폼</title>
+
+<style>
+</style>
+<script>
+var bt;
+//회원가입 버튼을 누르면 입력양식에 작성한 데이터를 서버로전송
+//서버로 전송하자(서버와 네트워크 끊겨져있.//)
+window.addEventListener("load",function(){
+	bt=document.getElementById("bt");
+	bt.addEventListener("click",function(){
+	//아이디에대한 유효성체크
+	//실제 전송이 일어나는 시점!
+		regist();
+	});
+});
+
+
+
+function regist(){
+	if(!form1.id.value){
+			alert("write id");s
+			form1.id.focus();
+			return;
+		}else if(!form1.pwd.value){
+			alert("write pwd");
+			form1.pwd.focus();
+			return;
+		}else if(!form1.name.value){
+			alert("writd name");
+			form1.name.focus();
+			return;
+		}
+		form1.action="/regist";//server url
+		form1.submit();
+}
+</script>
+</head>
+<body>
+<form name="form1" method="post">
+	<table width="400px" align="center" border="1px">
+		<tr>
+			<td>ID</td>
+			<td><input type="text" name="id" ></td>
+		</tr>
+		<tr>	
+			<td>Password</td>
+			<td><input type="text" name="pwd" ></td>
+		</tr>
+		<tr>		
+			<td>Name</td>		
+			<td><input type="text" name="name" ></td>
+		</tr>
+		<tr>		
+			<td colspan="2" align="center">		
+				<input type="button" value="회원등록" id="bt">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
